@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fate Cards</title>
+    <style>
+        .card {
+            width: 150px;
+            height: 200px;
+            border: 2px solid black;
+            display: inline-block;
+            text-align: center;
+            line-height: 200px;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+            margin: 10px;
+            background-color: #66ffff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pick 3 Fate Cards!</h1>
+    <div id="card1" class="card" onclick="revealCard(this)">Click Me!</div>
+    <div id="card2" class="card" onclick="revealCard(this)">Click Me!</div>
+    <div id="card3" class="card" onclick="revealCard(this)">Click Me!</div>
+
+    <script>
+        const fateOptions = [
+            "Car Trouble!
+Uh-oh… your car just broke down on the side of the road. Pay $75 to You-Tow-Em to get your car towed to a service station. Then pay Cars-R-Us $300 for the repairs.",
+            "Happy Birthday!
+Your grandparents sent you money to spend on whatever you want! Deposit $50 into your checking account!",
+            "Forgot lunch!
+You forgot your lunch today for work, so you had to eat out. Pay $20 to Greasy Fattys or Sublime Subs for your lunch.",
+            "In the Mail!
+Your parents know how difficult it is to live on your own, so they sent you a card with money in it. Deposit $20 into your checking account!",
+            "Flat tire!
+Uh-oh… your car just got a flat tire! Pay the following to Ultimate Mega Dealership to purchase a new tire for your vehicle:
+Hybrid Car $150 Truck $250 Luxury Car $200
+Extreme Luxury Car $350",
+            "You forgot!
+Uh-oh… You forgot your grandma’s birthday! How could you? Quickly run out to the store and buy her a $30 gift. Make your check payable to Bargain Mart Gifts.",
+            "Cough-wheeze!
+Uh-oh… looks like your sick! Pay $35 to Arm & A Leg Doctor’s Office for your doctor’s visit and $30 to The Medicine Shoppe for your prescription.",
+            "Pet problems!
+Uh-oh… looks like your pet got into a fight with another animal. Pay Greg’s Pet Vet $400 for the emergency pet visit, stitches, rabies shots and medicines.",
+            "Stolen!
+Uh-oh… your cell phone just got stolen. Pay Horizon Wireless $350 for your new phone, car charger and case.",
+            "Ran out of gas!
+Uh-oh… looks like you didn’t budget enough money for gas this month with all the driving you’ve been doing. Pay $100 to RTI Gasoline for more gas to get you through the rest of the month.",
+            "Hungry!
+Uh-oh… looks like you didn’t budget enough money for food this month. Pay $100 to Local Food Grocery for more gas to get you through the rest of the month.", 
+            "Party!
+Your best friend is throwing a party at the last minute. He/she asks you to bring some food to the party. You don’t want to disappoint them, so pay $40 to Local Food Grocery.",
+            "Stinky & smelly!
+Your toilet is broken and you couldn’t fix it by yourself, so you called in the professionals. Pay $300 to Those Plumbing Guys."
+            "Gone bad!
+Your power went off in the storm last night and now all of the food in your refrigerator is spoiled. Throw it out and buy new. Pay $200 to Local Food Grocery to replace it."
+        ];
+        function revealCard(card) {
+            const randomFate = fateOptions[Math.floor(Math.random() * fateOptions.length)];
+            card.innerHTML = randomFate;
+            card.style.backgroundColor = "#a8e6cf";
+        }
+    </script>
+</body>
+</html>
